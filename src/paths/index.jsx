@@ -351,7 +351,7 @@ const Index = () => {
         </section>
       </section>
       <hr />
-      <section>
+      <section id='map'>
         <h2>Map</h2>
         <p>Soon™️</p>
       </section>
