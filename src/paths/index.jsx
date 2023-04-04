@@ -265,7 +265,7 @@ const Index = () => {
       <hr />
       <section className='turnout' id='turnout'>
         <section id='turnoutTable'>
-          <h2>Turnout Table</h2>
+          <h2>Turnout</h2>
           {loading ? (
             <p>Loading results</p>
           ) : (
