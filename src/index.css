@@ -109,3 +109,26 @@ ul.horizontal-list {
 ul.horizontal-list li {
   display: inline;
 }
+
+.shittyBarGraph {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.shittyBarGraphBar {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px;
+  color: #fff;
+}
+
+.shittyBarGraphBar:nth-child(1) {
+  background-color: #2727d3;
+}
+
+.shittyBarGraphBar:nth-child(2) {
+  background-color: #f12b2b;
+}
