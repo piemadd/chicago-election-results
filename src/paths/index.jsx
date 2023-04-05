@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import MapComponent from "../map";
+//import MapComponent from "../map";
+import sampleElectionData from "../data.json";
 
 const Index = () => {
   const [electionData, setElectionData] = useState(null);
@@ -16,7 +17,10 @@ const Index = () => {
         });
     };
 
-    update();
+    setElectionData(sampleElectionData);
+    setLoading(false);
+
+    //update();
   }, []);
 
   const formatNumber = (num) => {
@@ -76,17 +80,16 @@ const Index = () => {
       <hr />
       <section className='whowon' id='whowon'>
         <h2>Who won?</h2>
-        <p className='sectiontitle'>I DON'T FUCKIN KNOW!!!</p>
-        <p>(yet)</p>
+        <p className='sectiontitle'>BRANDON WON! RAHHHHHHH!!!</p>
         <p>
-          Full election results will take some time to come in, but this will be
-          updated once a handful of reputable sources have called the race.
+          This is after the AP called the election with current statistics being
+          heavily in Brandon's favor.
         </p>
       </section>
       <hr />
       <p>
-        <b>NOTE: </b>This page automatically updates every minute, there is no
-        need to reload to get updated data.
+        <b>NOTE: </b>This page will receive updated data ever day or so until
+        the final results are in ~2 weeks after election day.
       </p>
       <hr />
       <section className='turnout' id='results'>
@@ -357,7 +360,10 @@ const Index = () => {
         {
           //<MapComponent electionData={electionData} />
         }
-        <p>Soon</p>
+        <p>
+          I sadly couldn't get this working night of the election. It might make
+          an appearance at some point, but who knows.
+        </p>
       </section>
       <section id='faqs-and-notes'>
         <h2>FAQs/Notes</h2>
@@ -394,22 +400,16 @@ const Index = () => {
         </ul>
         <h4>Notes</h4>
         <ul>
-          <li>
-            <p>
-              If you would like to access the API powering this site for your
-              own uses, it is available{" "}
-              <a href='https://chicago-election.piemadd.com/results'>here</a>,
-              with data updating every 2 minutes.
-            </p>
-          </li>
-          <li>
-            <p>
-              Made by <a href='https://piemadd.com/'>Piero Maddaleni</a> &copy;
-              2023
-            </p>
-          </li>
+          <p>No notes</p>
         </ul>
       </section>
+      <p
+        style={{
+          textAlign: "center",
+        }}
+      >
+        Made by <a href='https://piemadd.com/'>Piero Maddaleni</a> &copy; 2023
+      </p>
     </>
   );
 };
