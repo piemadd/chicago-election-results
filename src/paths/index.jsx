@@ -6,12 +6,6 @@ const Index = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    alert(
-      "This page WILL NOT WORK until after the election results are 100% completely reported. View them here: https://chicagoelections.gov/"
-    );
-  }, []);
-
-  useEffect(() => {
     const update = () => {
       fetch("https://chicago-election.piemadd.com/results")
         .then((res) => res.json())
@@ -48,12 +42,6 @@ const Index = () => {
           and <b>Brandon Johnson</b>
         </p>
       </section>
-      <hr />
-      <p>
-        <b>NOTE: </b>This page WILL NOT WORK until after the election results
-        are 100% completely reported. View them{" "}
-        <a href='https://chicagoelections.gov/'>here</a>.
-      </p>
       <hr />
       <section className='contents'>
         <h2>Table of Contents</h2>
