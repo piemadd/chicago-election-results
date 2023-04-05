@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import MapComponent from "../map";
 
 const Index = () => {
   const [electionData, setElectionData] = useState(null);
@@ -10,7 +11,7 @@ const Index = () => {
         .then((res) => res.json())
         .then((data) => {
           setElectionData(data);
-          setLoading(false);
+          //setLoading(false);
           setTimeout(update, 1000 * 60);
         });
     };
@@ -41,6 +42,8 @@ const Index = () => {
           and <b>Brandon Johnson</b>
         </p>
       </section>
+      <hr/>
+      <p><b>NOTE: </b>This page WILL NOT WORK until after the election results are 100% completely reported. View them <a href='https://chicagoelections.gov/'>here</a>.</p>
       <hr />
       <section className='contents'>
         <h2>Table of Contents</h2>
@@ -353,7 +356,10 @@ const Index = () => {
       <hr />
       <section id='map'>
         <h2>Map</h2>
-        <p>Soon™️</p>
+        {
+          //<MapComponent electionData={electionData} />
+        }
+        <p>Soon</p>
       </section>
       <section id='faqs-and-notes'>
         <h2>FAQs/Notes</h2>
